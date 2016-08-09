@@ -1,0 +1,22 @@
+<ion-view title="Nuevo" id="page1" class=" " >
+   <ion-content padding="true" class="has-header">
+
+        <div class="spacer" style="height: 20px;"></div>
+        <form id="form" name="form" class="list" ng-submit="submit(record)" novalidate>
+        <div class="list">
+          <label class="item item-input" ng-class="form.name.$touched && form.name.$invalid ? 'error_form' : '' ">
+            <input type="text" placeholder="Nombre" name="name" ng-model="record.name" required>
+          </label>
+          <label class="item item-input" ng-class="form.email.$touched && form.email.$invalid ? 'error_form' : '' ">
+            <input type="email" placeholder="Correo" name="email" ng-model="record.email" required>
+          </label>
+          <label class="item item-input" ng-class="form.country.$touched && form.country.$invalid ? 'error_form' : '' ">  
+            <input type="text" placeholder="País" name="country" ng-model="record.country" required>
+          </label>
+        </div>
+        <div class="padding">
+                <button class="button button-block button-positive" ng-disabled="form.$invalid">Guardar</button>
+        </div>
+        </form>
+    </ion-content>
+</ion-view> 

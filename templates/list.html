@@ -1,0 +1,28 @@
+<ion-view title="Lista" id="page2" class=" " >
+   <ion-content padding="true" class="has-header">
+        <button class="button button-positive" ng-click="new()">
+          Nuevo
+        </button>
+        <div class="spacer" style="height: 20px;"></div>
+        <label class="item item-input">
+          <i class="icon ion-search placeholder-icon"></i>
+          <input type="text" placeholder="Buscar"  ng-model="search">
+        </label>
+        <div class="spacer" style="height: 40px;"></div>
+
+        <ul class="list" ng-repeat="(key, value) in list | filter : search">
+            <li class="item">
+
+            </li>
+
+
+          <a class="item item-icon-left item-icon-right" ng-click="edit({{ key }})" href="#">
+                {{ value.name }}
+              <p>{{ value.email }}</p>
+              <p>{{ value.country }}</p>
+            <i class="icon ion-edit"></i>
+          </a>            
+
+        </ul>
+    </ion-content>
+</ion-view> 

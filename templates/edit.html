@@ -1,0 +1,21 @@
+<ion-view title="Editar" id="page3" class=" " >
+   <ion-content padding="true" class="has-header">
+
+        <div class="spacer" style="height: 20px;"></div>
+        <form id="form" name="form" class="list" ng-submit="submit(record)" novalidate>
+            <label class="item item-input">
+              <input type="text" placeholder="Nombre" ng-model="record.name" required>
+            </label>
+            <label class="item item-input">
+              <input type="email" placeholder="Correo" ng-model="record.email" required>
+            </label>
+            <label class="item item-input">
+              <input type="text" placeholder="País" ng-model="record.country" required>
+            </label>
+          </div>
+          <div class="padding">
+                  <button class="button button-block button-positive" ng-click="submit(record)">Editar</button>
+          </div>
+        </form>
+    </ion-content>
+</ion-view> 
